@@ -1,0 +1,109 @@
+main {
+  .handmade {
+    padding-top: 83px;
+    min-height: 80vh;
+    width: 100%;
+    background-image: url("/assets/img/home_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+
+    div {
+      margin-top: 83px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 30px;
+      h1 {
+        font-weight: 100;
+        color: white;
+        font-size: 96px;
+      }
+      h4 {
+        color: white;
+        font-size: 20px;
+      }
+      button {
+        cursor: pointer;
+        width: 167px;
+        height: 57px;
+      }
+      @media only screen and (max-width: 1140px) {
+        h1 {
+          text-align: center;
+          width: 571px;
+        }
+      }
+      @media only screen and (max-width: 920px) {
+        h1 {
+          text-align: center;
+          width: 345px;
+          font-size: 58px;
+        }
+        h4{
+            text-align: center;
+        }
+      }
+
+    }
+  }
+  .bestsellers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+    h2 {
+      text-align: center;
+      color: #4d2c57;
+      font-size: 48px;
+    }
+    .card {
+      display: flex;
+      gap: 25px;
+      img {
+        width: 100%;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .card_name {
+          font-size: 24px;
+        }
+        p {
+          font-size: 18px;
+          color: #4d2c57;
+        }
+      }
+    }
+    button{
+        width: 151px;
+        height: 57px;
+    }
+    @media only screen and (max-width: 1140px) {
+      h2 {
+        width: 240px;
+        text-align: center;
+      }
+    }
+    @media only screen and (max-width: 920px) {
+      h2 {
+        font-size: 38px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
