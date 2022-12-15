@@ -4,27 +4,75 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   .nav_element {
     ul {
       display: flex;
       gap: 30px;
+
       li {
         cursor: pointer;
         gap: 5px;
         display: flex;
         align-items: center;
+
         a {
           font-size: 18px;
         }
       }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        border-radius: 10px;
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+
+      .dropdown:hover {
+        i {
+          transition: .3s;
+          transform: rotate(180deg);
+        }
+
+        .dropdown-content {
+          display: block;
+        }
+      }
     }
   }
+
   .nav_logo {
     cursor: pointer;
+
     .hamburger_menu {
       display: none;
+      background-color: white;
+      border: solid white;
+      position: relative;
+      .myDIV{
+         border-radius: 10px;
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
     }
   }
+
   @media only screen and (max-width: 920px) {
     width: 100%;
     height: 83px;
@@ -32,29 +80,42 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
+
     .nav_logo {
       display: flex;
       align-items: center;
       gap: 30px;
+
       .hamburger_menu {
         display: block;
         font-size: 24px;
+        #myDIV{
+          display: none;
+        }
       }
+
       img {
         width: 70px;
         height: 18.5px;
       }
     }
+
     .nav_element {
       ul {
         display: flex;
         gap: 30px;
+
         li {
           display: none;
+
           a {
             font-size: 18px;
           }
         }
+        .dropdown{
+          display: none;
+        }
+
         .cart {
           display: block;
         }

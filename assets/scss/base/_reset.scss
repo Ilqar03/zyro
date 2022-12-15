@@ -1,8 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  list-style: none;
-  text-decoration: none;
+  
   box-sizing: border-box;
 }
 .nav_element {
@@ -10,5 +9,12 @@
   li,
   a {
     color: black;
+    list-style: none;
+  text-decoration: none;
+  }
+}
+footer{
+  ul,li,a{
+    list-style: none;
   }
 }

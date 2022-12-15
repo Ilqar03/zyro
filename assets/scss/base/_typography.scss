@@ -2,18 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .nav_element {
+
   ul,
   li,
   a {
     font-family: "DM Sans", sans-serif;
   }
 }
-.handmade{
-    h1{
-        font-family: 'Poppins', sans-serif;
-    }
-    h4{
-        font-family: "DM Sans", sans-serif;
-    }
+
+.handmade {
+  h1 {
+    font-family: 'Poppins', sans-serif;
   }
-  
+
+  h4 {
+    font-family: "DM Sans", sans-serif;
+  }
+}
+
+.card_home {
+  h4 {
+    font-family: 'Poppins', sans-serif;
+  }
+  p{
+    font-family: "DM Sans", sans-serif;
+  }
+}

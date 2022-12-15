@@ -3,8 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
-  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -12,6 +10,12 @@
 .nav_element li,
 .nav_element a {
   color: black;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer ul, footer li, footer a {
+  list-style: none;
 }
 
 .nav_element ul,
@@ -27,12 +31,22 @@
   font-family: "DM Sans", sans-serif;
 }
 
+.card_home h4 {
+  font-family: "Poppins", sans-serif;
+}
+.card_home p {
+  font-family: "DM Sans", sans-serif;
+}
+
 nav {
   width: 100%;
   height: 83px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 nav .nav_element ul {
   display: flex;
@@ -47,11 +61,46 @@ nav .nav_element ul li {
 nav .nav_element ul li a {
   font-size: 18px;
 }
+nav .nav_element ul .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .nav_element ul .dropdown-content {
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+nav .nav_element ul .dropdown:hover i {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+nav .nav_element ul .dropdown:hover .dropdown-content {
+  display: block;
+}
 nav .nav_logo {
   cursor: pointer;
 }
 nav .nav_logo .hamburger_menu {
   display: none;
+  background-color: white;
+  border: solid white;
+  position: relative;
+  display: inline-block;
+}
+nav .nav_logo .hamburger_menu .myDIV {
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
 }
 @media only screen and (max-width: 920px) {
   nav {
@@ -71,6 +120,9 @@ nav .nav_logo .hamburger_menu {
     display: block;
     font-size: 24px;
   }
+  nav .nav_logo .hamburger_menu #myDIV {
+    display: none;
+  }
   nav .nav_logo img {
     width: 70px;
     height: 18.5px;
@@ -85,11 +137,69 @@ nav .nav_logo .hamburger_menu {
   nav .nav_element ul li a {
     font-size: 18px;
   }
+  nav .nav_element ul .dropdown {
+    display: none;
+  }
   nav .nav_element ul .cart {
     display: block;
   }
 }
 
+footer {
+  width: 100%;
+  margin-top: 100px;
+  background-color: #f6f7f6;
+  width: 100%;
+  min-height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .footer_elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+@media only screen and (max-width: 920px) {
+  footer .footer_elements {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer .footer_elements div ul {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+footer .footer_elements div ul li a {
+  color: #1a1a1a;
+}
+@media only screen and (max-width: 920px) {
+  footer .footer_elements div ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer div {
+  padding: 20px 50px;
+  display: flex;
+  gap: 30px;
+}
+footer div i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 83px;
+  /*//////////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////////*/
+}
 main .handmade {
   padding-top: 83px;
   min-height: 80vh;
@@ -99,9 +209,10 @@ main .handmade {
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
+  display: flex;
+  justify-content: center;
 }
 main .handmade div {
-  margin-top: 83px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -175,8 +286,14 @@ main .bestsellers .card div p {
   color: #4d2c57;
 }
 main .bestsellers button {
+  cursor: pointer;
   width: 151px;
   height: 57px;
+  border: 2px solid #4d2c57;
+}
+main .bestsellers button:hover {
+  background-color: #4d2c57;
+  color: white;
 }
 @media only screen and (max-width: 1140px) {
   main .bestsellers h2 {
@@ -192,4 +309,174 @@ main .bestsellers button {
     display: flex;
     flex-direction: column;
   }
+}
+main .home_decor {
+  margin-top: 50px;
+  min-height: 80vh;
+  width: 100%;
+  background-image: url("/assets/img/homedecor.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+main .home_decor div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+main .home_decor div h2 {
+  font-weight: 100;
+  color: white;
+  font-size: 96px;
+}
+main .home_decor div h4 {
+  color: white;
+  font-size: 20px;
+}
+main .home_decor div button {
+  cursor: pointer;
+  width: 167px;
+  height: 57px;
+}
+@media only screen and (max-width: 1140px) {
+  main .home_decor div h2 {
+    text-align: center;
+    width: 571px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  main .home_decor div h2 {
+    text-align: center;
+    width: 345px;
+    font-size: 58px;
+  }
+  main .home_decor div h4 {
+    text-align: center;
+  }
+}
+main .card_home {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main .card_home img {
+  width: 100%;
+  height: 100%;
+}
+main .card_home h4 {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #4d2c57;
+}
+main .card_home p {
+  margin-top: 20px;
+  color: #4d2c57;
+  font-size: 20px;
+}
+main .card_home button {
+  margin-top: 20px;
+  width: 175px;
+  height: 57px;
+  border: 2px solid #4d2c57;
+}
+main .card_home button:hover {
+  background-color: #4d2c57;
+  color: white;
+}
+@media only screen and (max-width: 920px) {
+  main .card_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main .sign_up {
+  margin-top: 50px;
+  min-height: 80vh;
+  width: 100%;
+  background-image: url("/assets/img/sign-up.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+main .sign_up div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+main .sign_up div h2 {
+  font-weight: 100;
+  color: white;
+  font-size: 96px;
+}
+main .sign_up div input {
+  width: 391px;
+  height: 48px;
+  opacity: 0.5;
+}
+main .sign_up div button {
+  cursor: pointer;
+  width: 167px;
+  height: 57px;
+}
+@media only screen and (max-width: 1140px) {
+  main .sign_up div h2 {
+    text-align: center;
+    width: 571px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  main .sign_up div h2 {
+    text-align: center;
+    width: 345px;
+    font-size: 58px;
+  }
+  main .sign_up div h4 {
+    text-align: center;
+  }
+}
+main .instagram {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .instagram h2 {
+  font-size: 48px;
+  color: #4d2c57;
+}
+main .instagram div {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 920px) {
+  main .instagram div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main .instagram a {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #4d2c57;
 }/*# sourceMappingURL=main.css.map */

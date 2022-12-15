@@ -1,4 +1,6 @@
 main {
+  padding-top: 83px;
+  /*//////////////////////////////////////////////////*/
   .handmade {
     padding-top: 83px;
     min-height: 80vh;
@@ -8,9 +10,11 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
+    display: flex;
+    justify-content: center;
 
     div {
-      margin-top: 83px;
+
       width: 100%;
       height: 100%;
       display: flex;
@@ -19,39 +23,47 @@ main {
       justify-content: center;
 
       gap: 30px;
+
       h1 {
         font-weight: 100;
         color: white;
         font-size: 96px;
       }
+
       h4 {
         color: white;
         font-size: 20px;
       }
+
       button {
         cursor: pointer;
         width: 167px;
         height: 57px;
       }
+
       @media only screen and (max-width: 1140px) {
         h1 {
           text-align: center;
           width: 571px;
         }
       }
+
       @media only screen and (max-width: 920px) {
         h1 {
           text-align: center;
           width: 345px;
           font-size: 58px;
         }
-        h4{
-            text-align: center;
+
+        h4 {
+          text-align: center;
         }
       }
 
     }
   }
+
+  /*//////////////////////////////////////////////////*/
   .bestsellers {
     width: 100%;
     display: flex;
@@ -60,41 +72,57 @@ main {
     align-items: center;
     margin-top: 30px;
     gap: 30px;
+
     h2 {
       text-align: center;
       color: #4d2c57;
       font-size: 48px;
     }
+
     .card {
       display: flex;
       gap: 25px;
+
       img {
         width: 100%;
       }
+
       div {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+
         .card_name {
           font-size: 24px;
         }
+
         p {
           font-size: 18px;
           color: #4d2c57;
         }
       }
     }
-    button{
-        width: 151px;
-        height: 57px;
+
+    button {
+      cursor: pointer;
+      width: 151px;
+      height: 57px;
+      border: 2px solid #4d2c57;
     }
+
+    button:hover {
+      background-color: #4d2c57;
+      color: white;
+    }
+
     @media only screen and (max-width: 1140px) {
       h2 {
         width: 240px;
         text-align: center;
       }
     }
+
     @media only screen and (max-width: 920px) {
       h2 {
         font-size: 38px;
@@ -104,6 +132,206 @@ main {
         display: flex;
         flex-direction: column;
       }
+    }
+  }
+
+  /*//////////////////////////////////////////////////*/
+  .home_decor {
+    margin-top: 50px;
+    min-height: 80vh;
+    width: 100%;
+    background-image: url("/assets/img/homedecor.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      h2 {
+        font-weight: 100;
+        color: white;
+        font-size: 96px;
+      }
+
+      h4 {
+        color: white;
+        font-size: 20px;
+      }
+
+      button {
+        cursor: pointer;
+        width: 167px;
+        height: 57px;
+      }
+
+      @media only screen and (max-width: 1140px) {
+        h2 {
+          text-align: center;
+          width: 571px;
+        }
+      }
+
+      @media only screen and (max-width: 920px) {
+        h2 {
+          text-align: center;
+          width: 345px;
+          font-size: 58px;
+        }
+
+        h4 {
+          text-align: center;
+        }
+      }
+
+    }
+  }
+
+  /*//////////////////////////////////////////////////*/
+  .card_home {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    h4 {
+      margin-top: 20px;
+      font-size: 32px;
+      color: #4d2c57;
+    }
+
+    p {
+      margin-top: 20px;
+      color: #4d2c57;
+      font-size: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 175px;
+      height: 57px;
+      border: 2px solid #4d2c57;
+    }
+
+    button:hover {
+      background-color: #4d2c57;
+      color: white;
+    }
+
+    @media only screen and (max-width: 920px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /*//////////////////////////////////////////////////*/
+  .sign_up {
+    margin-top: 50px;
+    min-height: 80vh;
+    width: 100%;
+    background-image: url("/assets/img/sign-up.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      h2 {
+        font-weight: 100;
+        color: white;
+        font-size: 96px;
+      }
+
+      input {
+        width: 391px;
+        height: 48px;
+        opacity: 0.5;
+      }
+
+      button {
+        cursor: pointer;
+        width: 167px;
+        height: 57px;
+      }
+
+      @media only screen and (max-width: 1140px) {
+        h2 {
+          text-align: center;
+          width: 571px;
+        }
+      }
+
+      @media only screen and (max-width: 920px) {
+        h2 {
+          text-align: center;
+          width: 345px;
+          font-size: 58px;
+        }
+
+        h4 {
+          text-align: center;
+        }
+      }
+
+    }
+  }
+
+  /*//////////////////////////////////////////////////*/
+  .instagram {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 48px;
+      color: #4d2c57;
+    }
+
+    div {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      @media only screen and (max-width: 920px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    a {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #4d2c57;
     }
   }
 }

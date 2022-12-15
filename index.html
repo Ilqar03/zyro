@@ -1,99 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- nav start -->
-    <nav>
-      <div class="nav_logo">
-        <div class="hamburger_menu"><i class="fa-solid fa-bars"></i></div>
-        <img src="./assets/img/MINA_nav.png" alt="" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./script.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- nav start -->
+  <nav>
+    <div class="nav_logo">
+      <button class="hamburger_menu" onclick="myFunction()">
+        <i class="fa-solid fa-bars"></i>
+        <div id="myDIV">
+          <ul>
+            <li><a href="">Shop</a></li>
+            <li class="dropdown">
+              <i class="fa-solid fa-caret-down"></i>
+              <a href="">About</a>
+              <div class="dropdown-content">
+                <a href="">Sustainability</a>
+              </div>
+            </li>
+            <li><a href="">Contact</a></li>
+        </div>
+      </button>
+      <img src="./assets/img/MINA_nav.png" alt="" />
+    </div>
+    <div class="nav_element">
+      <ul>
+        <li><a href="">Shop</a></li>
+        <li class="dropdown">
+          <a href="">About</a>
+          <i class="fa-solid fa-caret-down"></i>
+          <div class="dropdown-content">
+            <a href="">Sustainability</a>
+          </div>
+        </li>
+        <li><a href="">Contact</a></li>
+        <li class="cart">
+          <i class="fa-solid fa-cart-shopping"></i><a href="">Cart</a>
+          (0)
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- nav end -->
+  <!-- home start -->
+  <main>
+    <section class="handmade">
+      <div>
+        <h1>Handmade ceramics</h1>
+        <h4>Painted clay ceramics made with love.</h4>
+        <button>Shop now</button>
       </div>
-      <div class="nav_element">
+    </section>
+    <!-- ///////////////// -->
+    <section class="bestsellers">
+      <h2>Our bestsellers</h2>
+      <div class="card">
+        <div>
+          <picture>
+            <source srcset="./assets/img/Candy_res.png" media="(max-width: 920px)" />
+            <img src="./assets/img/Candy.png" alt="" />
+          </picture>
+          <p class="card_name">'Candy' Flowerpot</p>
+          <p>$59.99</p>
+        </div>
+        <div>
+          <picture>
+            <source srcset="./assets/img/Candy_res.png" media="(max-width: 920px)" />
+            <img src="./assets/img/Candy.png" alt="" />
+          </picture>
+          <p class="card_name">'Candy' Flowerpot</p>
+          <p>$59.99</p>
+        </div>
+        <div>
+          <picture>
+            <source srcset="./assets/img/Candy_res.png" media="(max-width: 920px)" />
+            <img src="./assets/img/Candy.png" alt="" />
+          </picture>
+          <p class="card_name">'Candy' Flowerpot</p>
+          <p>$59.99</p>
+        </div>
+        <div>
+          <picture>
+            <source srcset="./assets/img/Candy_res.png" media="(max-width: 920px)" />
+            <img src="./assets/img/Candy.png" alt="" />
+          </picture>
+          <p class="card_name">'Candy' Flowerpot</p>
+          <p>$59.99</p>
+        </div>
+      </div>
+      <button>Buy now</button>
+    </section>
+    <!-- //////////// -->
+    <section class="home_decor">
+      <div>
+        <h2>Home decor items</h2>
+        <h4>Find your new favorite pieces.</h4>
+        <button>Shop now</button>
+      </div>
+    </section>
+    <!-- /////////////// -->
+    <section class="card_home">
+      <div>
+        <picture>
+          <source srcset="./assets/img/cardhome_1res.png" media="(max-width: 920px)" />
+          <img src="./assets/img/cardhome_1.png" alt="" />
+        </picture>
+        <h4>About Mina</h4>
+        <p>Mina is a brand born out of a passion for ceramics.
+        </p>
+        <button>Learn more</button>
+      </div>
+      <div>
+        <picture>
+          <source srcset="./assets/img/cardhome_2res.png" media="(max-width: 920px)" />
+          <img src="./assets/img/cardhome_2.png" alt="" />
+        </picture>
+        <h4>Sustainability</h4>
+        <p>Mina is an eco-friendly brand that cares about sustainability.
+        </p>
+        <button>Learn more</button>
+      </div>
+    </section>
+    <!-- ///////////////////////////////// -->
+    <section class="sign_up">
+      <div>
+        <h2>Sign-up for our newsletter</h2>
+        <input type="text" placeholder="Your email address">
+        <button>Submit</button>
+      </div>
+    </section>
+    <!-- ///////////////////////////////// -->
+    <section class="instagram">
+      <h2>Follow us on Instagram</h2>
+      <div>
+        <div>
+          <picture>
+            <source srcset="./assets/img/instagram_card1res.png" media="(max-width: 920px)" />
+            <img src="./assets/img/instagram_card1.png" alt="" />
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <source srcset="./assets/img/instagram_card2res.png" media="(max-width: 920px)" />
+            <img src="./assets/img/instagram_card2.png" alt="" />
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <source srcset="./assets/img/instagram_card3res.png" media="(max-width: 920px)" />
+            <img src="./assets/img/instagram_card3.png" alt="" />
+          </picture>
+        </div>
+      </div>
+      <a href="">@mina_studio</a>
+    </section>
+    <!-- ///////////////////////////////// -->
+  </main>
+  <!-- main end -->
+  <!-- footer start -->
+  <footer>
+    <div class="footer_elements">
+      <img src="./assets/img/MINA_nav.png" alt="">
+      <div>
         <ul>
-          <li><a href="">Shop</a></li>
-          <li><a href="">About</a><i class="fa-solid fa-caret-down"></i></li>
+          <li><a href="">Payments & Delivery</a></li>
+          <li><a href="">Returns</a></li>
           <li><a href="">Contact</a></li>
-          <li class="cart">
-            <i class="fa-solid fa-cart-shopping"></i><a href="">Cart</a>
-            (0)
-          </li>
         </ul>
       </div>
-    </nav>
-    <!-- nav end -->
-    <!-- home start -->
-    <main>
-      <section class="handmade">
-        <div>
-          <h1>Handmade ceramics</h1>
-          <h4>Painted clay ceramics made with love.</h4>
-          <button>Shop now</button>
-        </div>
-      </section>
+    </div>
+    <div>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+  </footer>
+</body>
 
-      <section class="bestsellers">
-        <h2>Our bestsellers</h2>
-        <div class="card">
-          <div>
-            <picture>
-              <source
-                srcset="./assets/img/Candy_res.png"
-                media="(max-width: 920px)"
-              />
-              <img src="./assets/img/Candy.png" alt="" />
-            </picture>
-            <p class="card_name">'Candy' Flowerpot</p>
-            <p>$59.99</p>
-          </div>
-          <div>
-            <picture>
-              <source
-                srcset="./assets/img/Candy_res.png"
-                media="(max-width: 920px)"
-              />
-              <img src="./assets/img/Candy.png" alt="" />
-            </picture>
-            <p class="card_name">'Candy' Flowerpot</p>
-            <p>$59.99</p>
-          </div>
-          <div>
-            <picture>
-              <source
-                srcset="./assets/img/Candy_res.png"
-                media="(max-width: 920px)"
-              />
-              <img src="./assets/img/Candy.png" alt="" />
-            </picture>
-            <p class="card_name">'Candy' Flowerpot</p>
-            <p>$59.99</p>
-          </div>
-          <div>
-            <picture>
-              <source
-                srcset="./assets/img/Candy_res.png"
-                media="(max-width: 920px)"
-              />
-              <img src="./assets/img/Candy.png" alt="" />
-            </picture>
-            <p class="card_name">'Candy' Flowerpot</p>
-            <p>$59.99</p>
-          </div>
-        </div>
-        <button>Buy now</button>
-      </section>
-    </main>
-  </body>
 </html>
